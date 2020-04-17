@@ -32,5 +32,5 @@ The implementation of Sarsa with function approximation can be found in the file
 
 Below the evolution of the mean squared error compared to the value function obtained by Monte-Carlo control is plotted. 
 
-<img src="results/td_mse_vs_episode.png" alt="drawing" width="800"/>
+<img src="results/fa_mse_vs_episode.png" alt="drawing" width="800"/>
 
