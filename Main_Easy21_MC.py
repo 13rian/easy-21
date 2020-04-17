@@ -41,8 +41,8 @@ def mc_episode():
     actions = []    # holds all actions of one episode
     
     # create the initial state
-    dealer_card = random.randint(1,10)
-    player_card = random.randint(1,10)
+    dealer_card = random.randint(1, 10)
+    player_card = random.randint(1, 10)
     state = environment.State(dealer_card, player_card)
 
 
@@ -113,6 +113,11 @@ for i in range(0, n_iter):
 # plot the action value function
 fig = plt.figure(1)
 ax = fig.gca(projection='3d')
+
+ax.set_xlabel('Player Sum')
+ax.set_ylabel('Dealer Showing')
+ax.set_zlabel('V*(s)')
+plt.title("Monte-Carlo Control")
 
 X = np.arange(1, 22, 1)
 Y = np.arange(1, 11, 1)

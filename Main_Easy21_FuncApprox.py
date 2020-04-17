@@ -191,4 +191,14 @@ for i in range(0, mse_error.shape[0]):
 plt.legend(loc='best')
 plt.xlabel("Episode")
 plt.ylabel("MSE")
+
+
+# plot the means squared error at the end of all iterations vs different lambdas
+fig = plt.figure(2)
+x = lam_range
+y = mse_error[:, mse_error.shape[1] - 1]
+plt.plot(x, y)
+
+plt.xlabel("lambda")
+plt.ylabel("MSE")
 plt.show()

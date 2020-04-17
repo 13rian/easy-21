@@ -20,7 +20,7 @@ random.seed(a=None, version=2)
 # constants
 n0 = 100
 lam_range = np.arange(0, 1.1, 0.1)
-nIter = 10000      # number of episodes   
+nIter = 10000      # number of episodes
 
 # define the indices of the different values
 q_hit_index = 0        # q value for action hit
@@ -197,11 +197,21 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 fig.colorbar(surf, shrink=0.5, aspect=5)
 
 
-
+# plot the means squared error at the end of all iterations vs different lambdas
 fig = plt.figure(2)
+x = lam_range
+y = mse_error[:, mse_error.shape[1] - 1]
+plt.plot(x, y)
+
+plt.xlabel("lambda")
+plt.ylabel("MSE")
+
+
+# plot the evolution of the mean squared error vs the episodes for all different lambdas
+fig = plt.figure(3)
 x = np.arange(nIter)
 for i in range(0, mse_error.shape[0]):
-    plt.plot(x, mse_error[i, :], label ="{:.1f}".format(lam_range[i]))
+    plt.plot(x, mse_error[i, :], label="{:.1f}".format(lam_range[i]))
     
 plt.legend(loc='best')
 plt.xlabel("Episode")
