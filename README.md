@@ -1,7 +1,7 @@
 # Easy21 Assignment of David Silver's Reinforcement Learning Course
 
 ## Content
-This project contains the solution to the Easy21 game defined in the assignment of David Silvers's Reinforcement course. 
+This project contains the solution to the Easy21 game defined in the assignment of David Silvers's reinforcement learning course. 
 
 ## Implementation of Easy21
 The game is implemented in the file environment.py. This contains a methods called step which accepts a state and an action as input. The return value is the new state after the action was executed. 
